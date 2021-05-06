@@ -16,7 +16,7 @@ var router = _express["default"].Router();
 
 router.get('/', function (req, res, next) {
   // res.render('index', { title: 'Express' });
-  res.json("hello sam");
+  res.json("hello jam");
 }); // module.exports = router;
 
 var _default = router;

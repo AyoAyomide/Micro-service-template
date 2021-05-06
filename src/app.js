@@ -1,17 +1,27 @@
 import express from 'express';
-import path from 'path';
+import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import indexRouter from './routes/index';
-import usersRouter from './routes/users';
+import middleware from './middleware';
+import api from './api';
 var app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.disable('x-powered-by');
+
 app.use(cookieParser());
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// 3rd party middleware
+app.use(cors({
+    exposedHeaders: ["links"]
+}));
+
+// internal middleware
+app.use(middleware());
+
+// api router
+app.use('/', api());
 
 export default app;

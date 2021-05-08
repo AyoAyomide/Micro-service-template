@@ -4,11 +4,6 @@
   "description": "micro service boilerplate",
   "private": true,
   "main": "dist",
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ]
-  },
   "scripts": {
     "prestart": "(rimraf dist) & (babel ./src --out-dir dist)",
     "start": "node ./dist/bin/www",
@@ -17,16 +12,17 @@
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
-    "debug": "~2.6.9",
+    "debug": "^4.3.1",
     "dotenv": "^9.0.0",
-    "express": "~4.16.1",
+    "express": "^4.17.1",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",
-    "eslint": "^7.25.0",
+    "eslint": "^7.26.0",
+    "jest": "^26.6.3",
     "nodemon": "^2.0.7",
     "rimraf": "^3.0.2"
   },

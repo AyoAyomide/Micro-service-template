@@ -6,6 +6,7 @@
   "main": "dist",
   "scripts": {
     "prestart": "(rimraf dist) & (babel ./src --out-dir dist)",
+    "build":"(rimraf dist) & (babel ./src --out-dir dist)",
     "start": "node ./dist/bin/www",
     "dev": "nodemon -w src --exec \"(rimraf dist) & (babel ./src --out-dir dist) & nodemon ./dist/bin/www\""
   },

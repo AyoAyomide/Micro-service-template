@@ -23,6 +23,6 @@ app.use(cors({
 app.use(middleware());
 
 // api router
-app.use('/', api());
+app.use('/api', api());
 
 export default app;

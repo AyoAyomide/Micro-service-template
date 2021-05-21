@@ -87,5 +87,6 @@
      ? 'pipe ' + addr
      : 'port ' + addr.port;
    debug('Listening on ' + bind);
+   console.log(`Listening on ${bind} \nAccess at http://localhost:${addr.port}`);
  }
  

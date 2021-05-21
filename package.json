@@ -7,9 +7,7 @@
   "scripts": {
     "clean": "node ./node_modules/rimraf/bin.js dist",
     "compile": "node ./node_modules/@babel/cli/bin/babel.js ./src --out-dir dist",
-    "heroku-postbuild": "npm uninstall rimraf & npm uninstall @babel/cli & npm uninstall @babel/core & npm uninstall @babel/preset-env",
-    "prestart": "(rimraf dist) & (babel ./src --out-dir dist)",
-    "build": "npm run clean ",
+    "build": "npm run clean & npm run compile",
     "start": "node ./dist/bin/www",
     "dev": "nodemon -w src --exec \"(rimraf dist) & (babel ./src --out-dir dist) & nodemon ./dist/bin/www\""
   },

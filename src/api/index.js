@@ -1,8 +1,11 @@
 import { Router } from 'express';
+import RESPONSE from '../helpers/@response';
 export default () => {
     let api = Router();
+    let apiResp;
     api.get('/', function (req, res) {
-        res.json("hello sam");
+        apiResp = RESPONSE.passed('hello world');
+        res.status(apiResp.code).json(apiResp);
     });
     return api;
 }

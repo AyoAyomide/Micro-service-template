@@ -8,7 +8,7 @@ export default () => {
             next();
         }
         else if (process.env.NODE_ENV != "dev") {
-            res.json({ env: process.env.NODE_ENV });
+            res.json({ env: process.envcls });
             next();
         }
 

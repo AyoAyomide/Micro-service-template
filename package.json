@@ -9,8 +9,7 @@
     "compile": "node ./node_modules/@babel/cli/bin/babel.js ./src --out-dir dist",
     "build": "npm run clean & npm run compile",
     "start": "node ./dist/bin/www",
-    "build-dev":"npm run build & nodemon ./dist/bin/www",
-    "dev": "nodemon -w src --exec npm run build-dev"
+    "dev": "nodemon -w src --exec \" npm run build \" & nodemon ./dist/bin/www"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.0",

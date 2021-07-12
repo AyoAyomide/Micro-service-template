@@ -22,9 +22,19 @@ class API_RESPONSE {
         }
         return this.response;
     }
+    failedServer(errors) {
+        console.log(errors);
+        this.response = {
+            code: 500,
+            message: 'Error from server',
+            errors:'check your log',
+            success: false,
+        }
+        return this.response;
+    }
     notFound(errors) {
         this.response = {
-            code: 400,
+            code: 404,
             message: 'URL not found',
             errors,
             success: false,

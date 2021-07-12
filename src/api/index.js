@@ -4,8 +4,11 @@ export default () => {
     let api = Router();
     let apiResp;
     api.get('/', function (req, res) {
-        apiResp = RESPONSE.passed('hello james');
+        apiResp = RESPONSE.passed('hello world');
         res.status(apiResp.code).json(apiResp);
+    });
+    api.get('/error', function (req, res) {
+        throw new Error('BROKEN');
     });
     return api;
 }

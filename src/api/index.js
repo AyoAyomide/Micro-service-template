@@ -8,6 +8,7 @@ export default () => {
         res.status(apiResp.code).json(apiResp);
     });
     api.get('/error', function (req, res) {
+        console.log('hello sam')
         throw new Error('BROKEN');
     });
     return api;

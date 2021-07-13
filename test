@@ -1,5 +1,0 @@
--w src --exec \" npm run build \" & nodemon ./dist/bin/www
-
-"execMap":{
-        
-    }
